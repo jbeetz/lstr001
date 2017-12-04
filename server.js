@@ -1,11 +1,11 @@
 //lstr-001 1st page
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.get('/i', (req, res) => {
-    res.send({hello:"world"});
+app.get('/', (req, res) => {
+    res.send({hi: 'there' });
 });
 
-app.listen(process.env.PORT, function(){
-    console.log('server has started on port 9600')
-});
+
+const PORT = process.env.PORT || 5500;
+app.listen(PORT);
