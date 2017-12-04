@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/index', (req, res) => {
+app.get('/i', (req, res) => {
     res.send({"hello":"world"});
 });
 
