@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>page one</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- <script type="application/json" src="/home/pi/files/daily/11-05.json"></script> -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
+
+  
+    </head>
+    <body>
+            <script>
+              var socket = io.connect('http://192.168.88.166:5800');      
+                socket.on('sms',(mess)=>{
+                    document.getElementById("sms").innerHTML=mess;
+                    console.log(mess);
+                });
+
+            </script>
+                    
+        <div>
+            <h2 id="sms"></h2>
+        </div>
+        
+    </body>
+</html>
