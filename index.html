@@ -13,7 +13,7 @@
     </head>
     <body>
             <script>
-              var socket = io.connect('http://192.168.88.166:5800');      
+              var socket = io.connect('http://ec2-52-55-72-111.compute-1.amazonaws.com:9600/');      
                 socket.on('sms',(mess)=>{
                     document.getElementById("sms").innerHTML=mess;
                     console.log(mess);
